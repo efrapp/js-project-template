@@ -94,3 +94,38 @@ module.exports = {
 ````
 
 ### NPM scripts set up
+We can set up some shortcuts to useful Webpack commands. For this, we will modifiy the `scritps: {}` key in the `package.json` file.
+
+To create an script to `build` the application, we can use:
+```
+{
+....
+  "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "build": "webpack"
+    },
+...
+}
+```
+If we don't want to build the project each time we make modifications we can use the `--watch` option of `webpack` command. For this we need to add the following script in the `package.json` file.
+```
+{
+....
+  "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "watch": "webpack --watch"
+    },
+...
+}
+```
+
+```
+{
+....
+  "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "server": "webpack-dev-server --open-page 'dist/'"
+    },
+...
+}
+```
