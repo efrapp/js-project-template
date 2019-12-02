@@ -1,3 +1,6 @@
+# JavaScrpt Project Template
+The aim of this repository is to create a ready-to-use Javascript project with Eslint, Stickler and Webpack set up on it.
+
 ## Eslint
 
 ### Create a `package.json` file
@@ -256,4 +259,19 @@ And the, we can create an script in the `package.json` to run it using `npm run 
 }
 ```
 The `--open-page` flag is to open the path supplied in string right away after the server runs.
+
+## Create your project from this repo
+There are two ways (the only two I know right now) to create your ready-to-use project from this repo. The first one, and the most simple, is to creat a `fork` from it but if you want a fresh installation you can move through the following steps:
+
+1. **Create a new origin in your newly created repo:** for this you need your project already cloned locally and run the following command:
+```
+git remote add template git@github.com:efrapp/js-project-template.git
+```
+`template` is an optional name, you can choose one of your preference.
+
+2. **Pull the repo to your local project:** create first the branch where you want to pull the template and run the following command:
+```
+git pull template master --allow-unrelated-histories
+```
+The `--allow-unrelated-histories` allows to combine the histories from two completely different project. With this you will avoid errors when git tries to merge the content.
 
