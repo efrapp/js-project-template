@@ -54,16 +54,16 @@ The first step is to set up our `package.json` file to make our package private 
 Now we need to add an html file in the root of our `dist` folder, we can call it `index.html` or the name you prefer, and in this file we are going to add a reference to a js file Webpack will create after build the code in the `src` folder. The `index.html` file will look like this:
 ```
 <!doctype html>
-  <html>
-   <head>
-     <title>Getting Started</title>
-   </head>
-   <body>
-    <!-- main.js file is create by Webpack after build the src folder -->
-     <script src="main.js"></script>
-   </body>
-  </html>
-  ```
+<html>
+ <head>
+   <title>Getting Started</title>
+ </head>
+ <body>
+  <!-- main.js file is create by Webpack after build the src folder -->
+   <script src="main.js"></script>
+ </body>
+</html>
+```
 When we have ready our project with this structure the next step is to generate our `main.js` file. For this we need to create an **entry point** this will be a file in the root of the `src` folder that Webpack will build to generate the `main.js` file. To tell Webpack what is the entry point we will add it in the `webpack.config.js` file like this:
 ```
 const path = require('path');
@@ -112,20 +112,23 @@ If we don't want to build the project each time we make modifications we can use
 {
 ....
   "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
       "watch": "webpack --watch"
-    },
+  },
 ...
 }
 ```
-
+We also need a sever to run the application, we can install the `webpack-dev-server` npm packege to run our app in a development enviroment. To install it, we can run:
+```
+npm install webpack-dev-server --save-dev
+```
+And the, we can create an script in the `package.json` to run it using `npm run server`. The script looks like this:
 ```
 {
 ....
   "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
       "server": "webpack-dev-server --open-page 'dist/'"
-    },
+  },
 ...
 }
 ```
+The `--open-page` flag is to open the path supplied in string right away after the server runs.
