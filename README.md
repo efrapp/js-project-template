@@ -1,4 +1,4 @@
-# JavaScrpt Project Template
+# JavaScript Project Template
 The aim of this repository is to create a ready-to-use Javascript project with Eslint, Stickler and Webpack set up on it.
 
 ## Eslint
